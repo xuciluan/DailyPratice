@@ -1,10 +1,10 @@
-package com.example.myapplication
+package com.example.myapplication.animview
 
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
-import android.widget.FrameLayout
+import com.example.myapplication.R
 
 /**
  *
@@ -153,7 +153,9 @@ class MySmartProgressView (context: Context, attributeSet: AttributeSet?, style:
 
     private fun initBitmap(){
         val f = 130f / 656f
-        bitmapDst = BitmapFactory.decodeResource(resources,R.drawable.indicator)
+        bitmapDst = BitmapFactory.decodeResource(resources,
+            R.drawable.indicator
+        )
         val bitmapDstHeight = width * f
         val bitmapDstWidth = bitmapDstHeight * bitmapDst.width / bitmapDst.height
 

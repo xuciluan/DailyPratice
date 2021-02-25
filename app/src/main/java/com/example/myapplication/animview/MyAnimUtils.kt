@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.animview
 
 import android.animation.ValueAnimator
 import android.content.Context

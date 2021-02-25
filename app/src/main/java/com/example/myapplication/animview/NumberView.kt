@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.animview
 
 import android.animation.ValueAnimator
 import android.content.Context
@@ -9,6 +9,7 @@ import android.view.animation.OvershootInterpolator
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
+import com.example.myapplication.R
 
 /**
  *
@@ -34,7 +35,8 @@ class NumberView (context: Context, attributeSet: AttributeSet?, style:Int) : Fr
     private lateinit var mTvFirst: TextView
     private lateinit var mTvSecond: TextView
     private lateinit var anim : ValueAnimator
-    private var upOrDown = DOWN_ANIMATION_MODE
+    private var upOrDown =
+        DOWN_ANIMATION_MODE
     private var mHeight = 0
     private var mTrueValue = 0
     private var mCurrentValue = 0

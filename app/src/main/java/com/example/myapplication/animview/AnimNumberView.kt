@@ -1,6 +1,6 @@
-import com.example.myapplication.NumberView
+package com.example.myapplication.animview
+
 import com.example.myapplication.R
-import com.example.myapplication.dip2px
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -24,8 +24,8 @@ class AnimNumberView  (context: Context, attributeSet: AttributeSet?, style:Int)
 
     private val singleNum : NumberView
     private val tenNum : NumberView
-    private val numberHeight = dip2px(context,46f)
-    private val numberWidth = dip2px(context,95f)
+    private val numberHeight = dip2px(context, 46f)
+    private val numberWidth = dip2px(context, 95f)
     private val numberTextSize = 80
     private var currentTemp = 0
 

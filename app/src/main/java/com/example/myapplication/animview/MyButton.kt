@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.animview
 
 import android.animation.Animator
 import android.animation.ValueAnimator
@@ -14,6 +14,7 @@ import android.view.ViewGroup
 import android.view.animation.ScaleAnimation
 import android.widget.FrameLayout
 import android.widget.TextView
+import com.example.myapplication.R
 
 /**
  *
@@ -34,7 +35,9 @@ class MyButton (context: Context, attributeSet: AttributeSet?, style:Int) : Fram
     private val touchColorResource = R.drawable.yellow_pressed
     private val normalResource = R.drawable.yellow_normal
     init {
-        val array = getContext().obtainStyledAttributes(attributeSet, R.styleable.MyButton)
+        val array = getContext().obtainStyledAttributes(attributeSet,
+            R.styleable.MyButton
+        )
         text = array.getString(R.styleable.MyButton_a6btn_text)?:""
         array.recycle()
         init()
@@ -48,7 +51,7 @@ class MyButton (context: Context, attributeSet: AttributeSet?, style:Int) : Fram
 
     private fun initButton(){
         drawable = GradientDrawable()
-        drawable.cornerRadius = dip2px(context,6f).toFloat()
+        drawable.cornerRadius = dip2px(context, 6f).toFloat()
         drawable.setColor(getResources().getColor(R.color.main_bt_color))
         drawable.setStroke(1,resources.getColor(R.color.btn_stork_color))
         background = drawable
@@ -69,21 +72,24 @@ class MyButton (context: Context, attributeSet: AttributeSet?, style:Int) : Fram
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
         val mlp = layoutParams as MarginLayoutParams
-        val margin = dip2px(context,9f)
+        val margin = dip2px(context, 9f)
         mlp.leftMargin  = margin
         mlp.rightMargin = margin
         mlp.topMargin  = margin
         mlp.bottomMargin = margin
         layoutParams = mlp
-        setMeasuredDimension(dip2px(context,340f),
-            dip2px(context,75f))
+        setMeasuredDimension(
+            dip2px(context, 340f),
+            dip2px(context, 75f)
+        )
     }
 
     fun initAnim(){
        scaleAnim = MyAnimUtils.getScaleAnim()
        val pressedColor = getResources().getColor(R.color.main_bt_trigger_color)
        val touchColor = getResources().getColor(R.color.main_bt_press_color)
-       colorAnim = MyAnimUtils.getColorAnim(pressedColor,touchColor)
+       colorAnim =
+           MyAnimUtils.getColorAnim(pressedColor, touchColor)
        colorAnim.addUpdateListener {
            val color = it.animatedValue as Int
            drawable.setColor(color)
