@@ -20,12 +20,11 @@ class PullLeftLoadMoreLayout  @JvmOverloads constructor(context: Context, attrib
     private var loadHeight = 0
     private lateinit var txt :TextView
     private lateinit var loadingView: LoadingView
-    private lateinit var anim : ValueAnimator
+    private val anim = ValueAnimator.ofFloat(0f,1f)
     private var mTranslation = 0f
     private var inAnim = false
 
     init {
-        anim = ValueAnimator.ofFloat(0f,1f)
         anim.duration = 500
         anim.run {
             addListener(object:Animator.AnimatorListener{
