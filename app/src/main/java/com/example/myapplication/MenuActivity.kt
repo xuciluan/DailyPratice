@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.aige.AigeTestActivity
+import com.example.myapplication.pullleftLoadmore.PullToMoreActivity
 
 /**
  *
@@ -23,6 +24,10 @@ class MenuActivity : AppCompatActivity() {
         when(view!!.id){
             R.id.btn_aige -> {
                 startPage(AigeTestActivity::class.java)
+            }
+
+            R.id.btn_pull_load_more -> {
+                startPage(PullToMoreActivity::class.java)
             }
         }
     }

@@ -20,7 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".aige.AigeTestActivity"></activity>
+        <activity android:name=".aige.AigeTestActivity"/>
+        <activity android:name=".pullleftLoadmore.PullToMoreActivity"/>
     </application>
 
 </manifest>
