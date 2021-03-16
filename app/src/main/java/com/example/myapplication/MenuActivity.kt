@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.aige.AigeTestActivity
 import com.example.myapplication.pullleftLoadmore.PullToMoreActivity
+import com.example.myapplication.twoviewswitch.TwoViewSwitcherActivity
 
 /**
  *
@@ -28,6 +29,10 @@ class MenuActivity : AppCompatActivity() {
 
             R.id.btn_pull_load_more -> {
                 startPage(PullToMoreActivity::class.java)
+            }
+
+            R.id.btn_two_switch -> {
+                startPage(TwoViewSwitcherActivity::class.java)
             }
         }
     }
